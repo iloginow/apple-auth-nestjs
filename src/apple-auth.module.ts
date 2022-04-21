@@ -7,4 +7,4 @@ import { AppleAuthService } from './apple-auth.service';
     providers: [AppleAuthService],
     exports: [AppleAuthService],
 })
-export class AuthModule {}
+export class AppleAuthModule {}
