@@ -3,6 +3,6 @@ import { AppleJwtPayload } from './types/apple-jwt-payload.type';
 export declare class AppleAuthService {
     private httpService;
     constructor(httpService: HttpService);
-    ValidateTokenAndDecode(token: string): Promise<AppleJwtPayload>;
+    getUserData(token: string): Promise<AppleJwtPayload>;
     private getAppleAuthKeys;
 }
