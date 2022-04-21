@@ -16,7 +16,7 @@ import { AppleAuthKeysResponse } from './types/apple-auth-keys-response.type';
 export class AppleAuthService {
     constructor(private httpService: HttpService) {}
 
-	public async ValidateTokenAndDecode(token: string): Promise<AppleJwtPayload> {
+	public async getUserData(token: string): Promise<AppleJwtPayload> {
         const header: JwtHeader & { kid: string } = jwtDecode<JwtHeader & { kid: string }>(token, {
 			header: true,
 		});
